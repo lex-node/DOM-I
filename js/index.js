@@ -1,3 +1,25 @@
+// # Task 1: Create selectors to point your data into elements
+// * [X] Create selectors by using any of the DOM element's methods
+// * [X] Note that IDs have been used on all images.  Use the IDs to update src path content
+//
+// ## Task 2: Update the HTML with the JSON data
+// * [X] Remember, NO direct updating of the HTML source is allowed.
+// * [ ] Using your selectors, update the content to match the example file.
+// * [ ] Remember to update the src attributes on images
+//
+// ## Task 3: Add new content
+// * [ ] Change the color of the navigation text to be green.
+// * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+// * [ ] Check your work by looking at the [original html](original.html) in the browser
+//
+// ## Stretch Goals
+// * [ ] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.
+// * [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
+//
+// ## Stretch Project: Digital Timer
+// This project is heavier on logic but employs some DOM manipulation to achieve it's goals.  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get.
+
+
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -39,4 +61,28 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', "img/header-img.png");
+
+let codeImg = document.getElementById("cta-img");
+codeImg.setAttribute('src', "img/logo.png");
+
+let codeImg2 = document.getElementById("middle-img");
+codeImg2.setAttribute('src', "img/mid-page-accent.jpg");
+
+ let h1Elements = document.getElementsByTagName('h1');
+ h1Elements[0].textContent = 'Dom Is Awesome';
+
+ let anchorElements = document.getElementsByTagName('a');
+ [anchorElements[0].textContent, anchorElements[1].textContent, anchorElements[2].textContent, anchorElements[3].textContent, anchorElements[4].textContent, anchorElements[5].textContent] = ["Services", "Product", "Vision", "Features", "About", "Contact"];
+
+let buttons = document.getElementsByTagName('button');
+buttons[0].textContent = "Get Started";
+
+let h4Elements = document.getElementsByTagName('h4');
+[h4Elements[0].textContent, h4Elements[1].textContent, h4Elements[2].textContent, h4Elements[3].textContent, h4Elements[4].textContent] = ["Features", "About", "Services", "Product", "Vision"];
+
+let middleParas = document.getElementsByTagName('p');
+[middleParas[0], middleParas[1], middleParas[2], middleParas[3], middleParas[4]] = ["blah blah blah", "blah blah blah", "blah blah blah", "blah blah blah", "blah blah blah"];
+ // Services product vision features about contact
+
+
