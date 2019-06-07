@@ -73,5 +73,7 @@ let footerPara = document.querySelector('footer p');
 footerPara.textContent = siteContent["footer"]["copyright"];
 
 
+[anchorElements[0].style.color, anchorElements[1].style.color, anchorElements[2].style.color, anchorElements[3].style.color, anchorElements[4].style.color, anchorElements[5].style.color] = ['green', 'green', 'green', 'green', 'green', 'green'];
+
 
 
