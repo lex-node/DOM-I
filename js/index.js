@@ -78,11 +78,12 @@ codeImg2.setAttribute('src', "img/mid-page-accent.jpg");
 let buttons = document.getElementsByTagName('button');
 buttons[0].textContent = "Get Started";
 
-let h4Elements = document.getElementsByTagName('h4');
+let h4Elements = document.querySelectorAll('.text-content h4');
 [h4Elements[0].textContent, h4Elements[1].textContent, h4Elements[2].textContent, h4Elements[3].textContent, h4Elements[4].textContent] = ["Features", "About", "Services", "Product", "Vision"];
 
-let middleParas = document.getElementsByTagName('p');
-[middleParas[0], middleParas[1], middleParas[2], middleParas[3], middleParas[4]] = ["blah blah blah", "blah blah blah", "blah blah blah", "blah blah blah", "blah blah blah"];
+let middleParas = document.querySelectorAll('.text-content p');
+let textBox = "Aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis";
+[middleParas[0].textContent, middleParas[1].textContent, middleParas[2].textContent, middleParas[3].textContent, middleParas[4].textContent] = [textBox, textBox, textBox, textBox, textBox];
  // Services product vision features about contact
 
 
