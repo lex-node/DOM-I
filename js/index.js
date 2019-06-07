@@ -47,3 +47,31 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+let h1Elements = document.getElementsByTagName('h1');
+h1Elements[0].textContent = siteContent["cta"]["h1"];
+
+let anchorElements = document.getElementsByTagName('a');
+[anchorElements[0].textContent, anchorElements[1].textContent, anchorElements[2].textContent, anchorElements[3].textContent, anchorElements[4].textContent, anchorElements[5].textContent] = [siteContent["nav"]["nav-item-1"], siteContent["nav"]["nav-item-2"], siteContent["nav"]["nav-item-3"], siteContent["nav"]["nav-item-4"], siteContent["nav"]["nav-item-5"], siteContent["nav"]["nav-item-6"]];
+
+let buttons = document.getElementsByTagName('button');
+buttons[0].textContent = siteContent["cta"]["button"];
+
+let h4Elements = document.querySelectorAll('.text-content h4');
+[h4Elements[0].textContent, h4Elements[1].textContent, h4Elements[2].textContent, h4Elements[3].textContent, h4Elements[4].textContent] = [siteContent["main-content"]["features-h4"], siteContent["main-content"]["about-h4"], siteContent["main-content"]["services-h4"], siteContent["main-content"]["product-h4"], siteContent["main-content"]["vision-h4"]];
+
+
+let middleParas = document.querySelectorAll('.text-content p');
+[middleParas[0].textContent, middleParas[1].textContent, middleParas[2].textContent, middleParas[3].textContent, middleParas[4].textContent] = [siteContent["main-content"]["features-content"], siteContent["main-content"]["about-content"], siteContent["main-content"]["services-content"], siteContent["main-content"]["product-content"], siteContent["main-content"]["vision-content"]];
+
+let contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = "Contact";
+
+let contactParas = document.querySelectorAll('.contact p');
+[contactParas[0].textContent, contactParas[1].textContent, contactParas[2].textContent] = [siteContent["contact"]["address"], siteContent["contact"]["phone"], siteContent["contact"]["email"]];
+
+let footerPara = document.querySelector('footer p');
+footerPara.textContent = siteContent["footer"]["copyright"];
+
+
+
+
