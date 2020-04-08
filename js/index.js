@@ -1,3 +1,6 @@
+/***************
+ CONTENT DATA
+ ***************/
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -37,28 +40,53 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+/***************
+ IMAGES
+ ***************/
 let logo = document.getElementById("logo-img");
 logo.src = siteContent["nav"]["img-src"];
-// ALTERNATIVE METHOD: logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.src = siteContent["cta"]["img-src"];
-// ALTERNATIVE METHOD: ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let middleImg = document.getElementById("middle-img");
 middleImg.src = siteContent["main-content"]["middle-img-src"];
-// ALTERNATIVE METHOD: middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+// set nav text content via DOM selectors
+let navLinks = document.querySelectorAll("nav > a");
+for (i = 0; i < navLinks.length; i++) {
+  navLinks[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
+}
+
+/***************
+ MAIN TEXT CONTENT
+ ***************/
+document.querySelector("div.cta-text > h1").textContent = siteContent["cta"]["h1"];
+document.querySelector("div.cta-text > button").textContent = siteContent["cta"]["button"];
+
+let textContentBoxTypes = ["features", "about", "services", "product", "vision"]
+let textContentBoxHeaders = document.querySelectorAll(`.text-content > h4`)
+let textContentBoxParas = document.querySelectorAll(`.text-content > p`);
+
+for (i = 0; i < textContentBoxHeaders.length; i++) {
+  textContentBoxHeaders[i].textContent = siteContent[`main-content`][`${textContentBoxTypes[i]}-h4`];
+}
+
+for (i = 0; i < textContentBoxParas.length; i++) {
+  textContentBoxParas[i].textContent = siteContent[`main-content`][`${textContentBoxTypes[i]}-content`];
+}
+/***************
+ CONTACT CONTENT
+ ***************/
+let contactElements = document.querySelector(".contact").children;
+let contactContents = Object.getOwnPropertyNames(siteContent['contact']);
+for (i = 0; i < contactElements.length; i++) {
+  contactElements[i].textContent = siteContent[`contact`][`${contactContents[i]}`];
+}
+
+document.querySelector('footer > p').textContent = siteContent['footer']["copyright"];
 /*
-## Task 1: Create selectors to point your data into elements
-* [X] Create selectors by using any of the DOM element's methods
-* [X] Note that IDs have been used on all images.  Use the IDs to update src path content
 
-## Task 2: Update the HTML with the JSON data
-* [ ] Remember, NO direct updating of the HTML source is allowed.
-* [ ] Using your selectors, update the content to match the example file.
-* [ ] Remember to update the src attributes on images
 
 ## Task 3: Add new content
 * [ ] Change the color of the navigation text to be green.
