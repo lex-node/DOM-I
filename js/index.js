@@ -84,14 +84,25 @@ for (i = 0; i < contactElements.length; i++) {
   contactElements[i].textContent = siteContent[`contact`][`${contactContents[i]}`];
 }
 
+/***************
+ FOOTER CONTENT
+ ***************/
 document.querySelector('footer > p').textContent = siteContent['footer']["copyright"];
+
+/***************
+ NEW SITE CONTENT
+ ***************/
+
+for (i = 0; i < navLinks.length; i++) {
+  navLinks[i].style = "color: green";
+}
+
+let navElement = document.querySelector("nav");
+let lastNav = navElement.appendChild(document.createElement("a"));
+let firstNav = navElement.prepend(document.createElement("a"));
+
 /*
 
-
-## Task 3: Add new content
-* [ ] Change the color of the navigation text to be green.
-* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-* [ ] Check your work by looking at the [original html](original.html) in the browser
 
 ## Stretch Goals
 * [ ] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.
