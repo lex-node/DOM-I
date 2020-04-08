@@ -29,14 +29,42 @@ const siteContent = {
   "contact": {
     "contact-h4" : "Contact",
     "address" : "123 Way 456 Street Somewhere, USA",
-    "phone" : "1 (888) 888-8888",
-    "email" : "sales@greatidea.io",
+    "phone": "1 (888) 888-8888",
+    "email": "sales@greatidea.io",
   },
   "footer": {
-    "copyright" : "Copyright Great Idea! 2018"
+    "copyright": "Copyright Great Idea! 2018"
   },
 };
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.src = siteContent["nav"]["img-src"];
+// ALTERNATIVE METHOD: logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.src = siteContent["cta"]["img-src"];
+// ALTERNATIVE METHOD: ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let middleImg = document.getElementById("middle-img");
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+// ALTERNATIVE METHOD: middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+/*
+## Task 1: Create selectors to point your data into elements
+* [X] Create selectors by using any of the DOM element's methods
+* [X] Note that IDs have been used on all images.  Use the IDs to update src path content
+
+## Task 2: Update the HTML with the JSON data
+* [ ] Remember, NO direct updating of the HTML source is allowed.
+* [ ] Using your selectors, update the content to match the example file.
+* [ ] Remember to update the src attributes on images
+
+## Task 3: Add new content
+* [ ] Change the color of the navigation text to be green.
+* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+* [ ] Check your work by looking at the [original html](original.html) in the browser
+
+## Stretch Goals
+* [ ] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.
+* [ ] Study tomorrow's lesson on events and try to integrate a button that can update conte*/
